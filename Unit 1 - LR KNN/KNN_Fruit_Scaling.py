@@ -18,9 +18,16 @@
 
 # * Classify fruits data using KNN classifier
 # * Visualize the predictions before and after scaling
+import os
 import pandas as pd
 import numpy as np
 
+if os.path.exists("data\Fruits.csv"):
+    print("File exists")
+else:
+    print("File does not exist")
+# Unit 1 - LR KNN\data\Fruits.csv
 # Load the dataset
-df = pd.read_csv("data/fruits_weight_sphercity.csv")
-print(df.head())
+# df = pd.read_csv("data/fruits_weight_sphercity.csv")
+# adv = pd.read_csv("data/social_advertising.csv")
+# print(df.head())
