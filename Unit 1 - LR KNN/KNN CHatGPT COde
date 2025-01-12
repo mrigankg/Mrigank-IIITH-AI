@@ -1,0 +1,47 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+
+# Sample data
+data = {
+    'Age': [22, 25, 47, 52, 46, 56, 48, 55, 60, 62],
+    'EstimatedSalary': [15000, 29000, 47000, 52000, 46000, 58000, 61000, 67000, 70000, 72000],
+    'Purchased': [0, 0, 1, 1, 0, 1, 1, 1, 1, 1]
+}
+df = pd.DataFrame(data)
+
+# Features and target
+X = df[['Age', 'EstimatedSalary']]
+y = df['Purchased']
+
+# Split the data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Standardize the features
+scaler = StandardScaler()
+X_train_Scale = scaler.fit_transform(X_train)
+X_test_Scale = scaler.transform(X_test)
+
+# Train the KNN model
+knn = KNeighborsClassifier(n_neighbors=3)
+knn.fit(X_train_Scale, y_train)
+
+# Plotting the decision boundaries
+h = .02  # step size in the mesh
+x_min, x_max = X_train_Scale[:, 0].min() - 1, X_train_Scale[:, 0].max() + 1
+y_min, y_max = X_train_Scale[:, 1].min() - 1, X_train_Scale[:, 1].max() + 1
+xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
+
+Z = knn.predict(np.c_[xx.ravel(), yy.ravel()])
+Z = Z.reshape(xx.shape)
+
+plt.figure(figsize=(8, 6))
+plt.contourf(xx, yy, Z, alpha=0.8, cmap=plt.cm.Paired)
+plt.scatter(X_test_Scale[:, 0], X_test_Scale[:, 1], c=y_test, edgecolor='k', s=20, cmap=plt.cm.Paired)
+plt.xlabel('Age (scaled)')
+plt.ylabel('Estimated Salary (scaled)')
+plt.title('KNN Decision Boundaries and Test Data Points')
+plt.show()
