@@ -24,7 +24,7 @@ y = df['y']
 model = LinearRegression();
 model.fit(x, y);
 
-slope = model.coef_[0]
+slope = model.coef_[0] # its an array hence used index 0 as there can be multiple intercept for each feature. Here we have only 1 feature.#Mean squar error
 intercept = model.intercept_
 
 predict = model.predict(x)
@@ -34,7 +34,13 @@ print("Intercept: ", intercept)
 
 plt.plot(df['x'], df['y'], color = "green")
 plt.plot(df['x'], predict , color='red')
-plt.show();
+# plt.show();
 
-abc = np.array([6, 7, 8, 9, 10]).reshape(-1, 1)
-print(abc)
+# mean square error
+
+from sklearn.metrics import mean_squared_error
+mse = mean_squared_error(y, predict)
+print("Mean Squared Error: ", mse)
+print("Round MSE : ", round(mse, 2))
+
+print(model.score(x,y)) #In summary, you use the actual values in model.score to evaluate how well the model's predictions match the real data.
