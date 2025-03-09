@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'C:\Users\mriga\AppData\Local\Microsoft\WindowsApps\python.exe'
+                git branch: 'main', url: 'https://github.com/mrigankg/Mrigank-IIITH-AI'
             }
         }
 
