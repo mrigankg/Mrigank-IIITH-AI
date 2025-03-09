@@ -20,8 +20,7 @@ pipeline {
                         sh "python3 -m venv $VENV_DIR"
                         sh "source $VENV_DIR/bin/activate"
                     } else {
-                        bat "python -m venv %VENV_DIR%"
-                        // bat "call %VENV_DIR%\\Scripts\\activate"
+                        bat "py -%PYTHON_VERSION% -m venv %VENV_DIR%"
                     }
                 }
             }
@@ -31,9 +30,11 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
+                        sh "$VENV_DIR/bin/pip install --upgrade pip"
                         sh "$VENV_DIR/bin/pip install -r requirements.txt"
                     } else {
-                        bat "%VENV_DIR%\\Scripts\\pip install -r requirements.txt"
+                        bat "%VENV_DIR%\\Scripts\\python -m pip install --upgrade pip"
+                        bat "%VENV_DIR%\\Scripts\\python -m pip install -r requirements.txt"
                     }
                 }
             }
@@ -45,7 +46,7 @@ pipeline {
                     if (isUnix()) {
                         sh "$VENV_DIR/bin/pytest --junitxml=reports/results.xml"
                     } else {
-                        bat "%VENV_DIR%\\Scripts\\pytest --junitxml=reports/results.xml"
+                        bat "%VENV_DIR%\\Scripts\\python -m pytest --junitxml=reports/results.xml"
                     }
                 }
             }
