@@ -21,7 +21,7 @@ pipeline {
                         sh "source $VENV_DIR/bin/activate"
                     } else {
                         bat "python -m venv %VENV_DIR%"
-                        bat "call %VENV_DIR%\\Scripts\\activate"
+                        // bat "call %VENV_DIR%\\Scripts\\activate"
                     }
                 }
             }
