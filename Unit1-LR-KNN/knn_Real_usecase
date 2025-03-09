@@ -1,0 +1,54 @@
+1. **Amazon: Recommendation Systems**
+   - **Feature Being Predicted**: Recommended products for a user.
+   - **Features Used**: User purchase history, browsing behavior, ratings, and product similarities.
+   - **Use Case**: Amazon uses KNN to suggest products by finding similar users (neighbors) based on their preferences and recommending items they have purchased or liked.
+
+2. **Netflix: Content Recommendations**
+   - **Feature Being Predicted**: TV shows or movies a user is likely to watch.
+   - **Features Used**: User viewing history, genre preferences, and ratings.
+   - **Use Case**: Netflix employs KNN to group users with similar viewing habits and recommend content that similar users have enjoyed.
+
+3. **Uber: Ride ETA and Location Clustering**
+   - **Feature Being Predicted**: Estimated Time of Arrival (ETA) for rides.
+   - **Features Used**: Geographic coordinates, traffic conditions, and historical travel times.
+   - **Use Case**: Uber uses KNN to find the closest available drivers and to cluster locations for more efficient dispatch.
+
+4. **Pinterest: Image Search and Recommendation**
+   - **Feature Being Predicted**: Related images or boards for a user's query.
+   - **Features Used**: Image metadata, visual similarities (e.g., colors, patterns), and user interaction history.
+   - **Use Case**: Pinterest uses KNN for content-based image recommendation by finding visually similar images based on feature vectors.
+
+5. **Spotify: Music Recommendations**
+   - **Feature Being Predicted**: Songs or playlists a user might like.
+   - **Features Used**: Audio features (tempo, energy, pitch), listening history, and user-generated playlists.
+   - **Use Case**: Spotify applies KNN to group similar songs or users and suggest music tailored to individual tastes.
+
+6. **PayPal: Fraud Detection**
+   - **Feature Being Predicted**: Probability of a transaction being fraudulent.
+   - **Features Used**: Transaction amount, location, time, and user behavior.
+   - **Use Case**: PayPal uses KNN to compare new transactions with past transactions (both fraudulent and legitimate) to detect anomalies.
+
+7. **LinkedIn: People You May Know**
+   - **Feature Being Predicted**: Potential connections for a user.
+   - **Features Used**: Common connections, profile similarity, shared interests, and geographic location.
+   - **Use Case**: LinkedIn uses KNN to identify users with similar profiles and suggest them as connections.
+
+8. **Healthcare Companies: Disease Diagnosis**
+   - **Feature Being Predicted**: Probability of a patient having a specific disease.
+   - **Features Used**: Symptoms, diagnostic test results, and patient history.
+   - **Use Case**: Healthcare companies use KNN to compare a patient's data to that of others with similar symptoms or test results to diagnose conditions.
+
+9. **Retailers: Customer Segmentation**
+   - **Feature Being Predicted**: Customer clusters for targeted marketing.
+   - **Features Used**: Purchase history, demographics, and spending patterns.
+   - **Use Case**: Retailers like Walmart use KNN to group customers into segments for personalized marketing and offers.
+
+10. **Gaming Companies: Matchmaking**
+    - **Feature Being Predicted**: Ideal opponents or teammates for a player.
+    - **Features Used**: Player skill level, gaming history, and performance metrics.
+    - **Use Case**: Gaming companies like Riot Games use KNN to match players with others of similar skill levels for balanced competition.
+
+### Why KNN is Popular
+- **Simplicity**: Easy to implement and understand.
+- **Flexibility**: Works well for classification, regression, and recommendation tasks.
+- **No Training Phase**: Operates on demand, making it useful for real-time applications.

@@ -1,0 +1,52 @@
+1. Amazon: Demand Forecasting
+Feature Being Predicted:
+Product demand (units sold).
+Features Used:
+Product price, seasonal trends, advertising spend, and customer reviews.
+Use Case: Amazon uses linear regression for inventory optimization by predicting how many units of a product are likely to be sold in a given period.
+2. Zillow: Real Estate Price Prediction
+Feature Being Predicted:
+House prices.
+Features Used:
+Size of the house, number of bedrooms, location, age of the house, and local amenities.
+Use Case: Zillow applies linear regression to create its Zestimate, a tool for estimating home values based on publicly available data.
+3. Uber: Surge Pricing
+Feature Being Predicted:
+Ride demand or surge price multiplier.
+Features Used:
+Time of day, weather conditions, location, and number of available drivers.
+Use Case: Uber uses linear regression to determine real-time demand for rides and adjust pricing dynamically.
+4. Netflix: User Engagement Prediction
+Feature Being Predicted:
+Viewer ratings or hours watched.
+Features Used:
+Genre preferences, viewing history, ratings given to similar shows, and release timing.
+Use Case: Netflix employs linear regression to predict how engaged a user might be with a particular show or movie and recommend content accordingly.
+5. Coca-Cola: Sales Analysis
+Feature Being Predicted:
+Beverage sales volume.
+Features Used:
+Advertising spend, seasonal factors, pricing, and distribution network coverage.
+Use Case: Coca-Cola uses linear regression to evaluate how changes in pricing or marketing strategies impact sales.
+6. Tesla: Battery Performance Prediction
+Feature Being Predicted:
+Battery lifespan or range.
+Features Used:
+Charging patterns, temperature exposure, and usage intensity.
+Use Case: Tesla uses linear regression to improve battery performance and make accurate predictions for warranty and maintenance.
+7. Google Ads: Click-Through Rate Prediction
+Feature Being Predicted:
+Click-through rate (CTR) of ads.
+Features Used:
+Ad position, keyword relevance, competition bids, and user demographics.
+Use Case: Google employs linear regression to optimize ad placements and predict ad performance.
+8. Airlines: Ticket Price Optimization
+Feature Being Predicted:
+Ticket prices.
+Features Used:
+Time to departure, booking trends, seat availability, and competitor pricing.
+Use Case: Airlines use linear regression to dynamically adjust ticket prices to maximize revenue while staying competitive.
+Why Companies Use Linear Regression
+Simplicity: Easy to implement and interpret.
+Speed: Computationally efficient for large-scale predictions.
+Business Insights: Helps identify how individual features affect outcomes (e.g., price elasticity).
