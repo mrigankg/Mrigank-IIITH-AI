@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/mrigankg/Mrigank-IIITH-AI'
+                git branch: 'master', url: 'https://github.com/mrigankg/Mrigank-IIITH-AI'
             }
         }
 
