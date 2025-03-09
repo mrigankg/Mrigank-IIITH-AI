@@ -20,7 +20,7 @@ pipeline {
                         sh "python3 -m venv $VENV_DIR"
                         sh "source $VENV_DIR/bin/activate"
                     } else {
-                        bat "py -%PYTHON_VERSION% -m venv %VENV_DIR%"
+                        bat "python -m venv %VENV_DIR%"
                     }
                 }
             }
