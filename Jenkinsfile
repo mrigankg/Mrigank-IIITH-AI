@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/mrigankg/Mrigank-IIITH-AI.git'
+                git branch: 'main', url: 'C:\Users\mriga\AppData\Local\Microsoft\WindowsApps\python.exe'
             }
         }
 
@@ -20,11 +20,7 @@ pipeline {
                         sh "python3 -m venv $VENV_DIR"
                         sh "source $VENV_DIR/bin/activate"
                     } else {
-
                         bat "py -%PYTHON_VERSION% -m venv %VENV_DIR%"
-
-                        bat "python -m venv %VENV_DIR%"
-
                     }
                 }
             }
