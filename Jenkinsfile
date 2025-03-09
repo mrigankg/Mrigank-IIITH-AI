@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PYTHON_VERSION = "3.10"
+        PYTHON_VERSION = "3.11.9"
         VENV_DIR = "venv"
     }
 
